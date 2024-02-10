@@ -9,6 +9,7 @@
   --secondary-white: #e6e6e6;
   --lightgrey: rgba(255, 255, 255, 0.1);
   --darkgrey: #4f4f4f;
+  --feedtext: #a8a8a8;
   --blue: #006bb0;
   --popup: #262626;
   --popuptext: #e7e7e7;
@@ -150,4 +151,100 @@ p {
 
 .moreoptionspopupcontainer.openclose {
   display: block;
+}
+
+.moreoptionspopupcontainer .sidebarlinktext {
+  font-size: 0.9rem;
+}
+
+.popuptopbottombars {
+  margin: 1rem auto;
+}
+
+.popuptopbottombars::before {
+  content: "";
+  background-color: var(--darkgrey);
+  height: 3px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 7rem;
+  left: 0;
+}
+
+.popuptopbottombars::after {
+  content: "";
+  background-color: var(--darkgrey);
+  height: 3px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 11rem;
+  left: 0;
+}
+
+/* ====================== sidebar menu ====================== */
+.suggestionsection {
+  border-left: 1px solid var(--lightgrey);
+  padding: var(--card-border-radius) var(--card-padding);
+}
+
+.loggedinuserprofilecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loggedinuserdetailscontainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoutswitchprofile {
+  color: var(--blue);
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.logoutswitchprofile:hover {
+  color: var(--primary-white);
+}
+
+.loggedinusernametitle {
+  color: var(--secondary-white);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+.loggedinusername {
+  font-size: 1rem;
+}
+
+.usersuggestionprofilescontainer {
+  margin: var(--card-border-radius) 0;
+}
+
+.usersuggestionprofileheadline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.usersuggestionheadline {
+  color: var(--feedtext);
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.seeallbtn {
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.seeallbtn:hover {
+  color: var(--feedtext);
 }
