@@ -23,7 +23,7 @@
   --card-padding: 1.8rem;
   --padding-1: 1.2rem;
   /* ====================== box shadow ====================== */
-  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow: 0 2rem 3rem var(--feedtext);
 }
 
 * {
@@ -184,7 +184,7 @@ p {
 }
 
 /* ====================== sidebar menu ====================== */
-.suggestionsection {
+.feedsidebarsection {
   border-left: 1px solid var(--lightgrey);
   padding: var(--card-border-radius) var(--card-padding);
   position: relative;
@@ -219,10 +219,12 @@ p {
   text-transform: capitalize;
   font-size: 0.9rem;
   font-weight: 600;
+  cursor: text;
 }
 
 .loggedinusername {
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .usersuggestionprofilescontainer {
@@ -297,4 +299,81 @@ p {
 .copyrightheadline {
   text-transform: uppercase;
   color: var(--feedtext);
+}
+
+.suggesteduseractivity {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.usersuggestionviewprofilecontainer {
+  position: absolute;
+  right: 0;
+}
+
+.usersuggestionviewprofilecards {
+  padding: var(--border-radius-3);
+  border: 2px solid var(--lightgrey);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 20vw;
+  position: relative;
+  bottom: 17rem;
+  /* margin: 1rem 0; */
+}
+
+.usersuggestionprofile1,
+.usersuggestionprofile2,
+.usersuggestionprofile3,
+.usersuggestionprofile4 {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.usersuggestionprofiledetailscontainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.followersactivitydetailscontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.suggesteduserposts,
+.suggesteduserfollowings,
+.suggesteduserfollowers {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.userpicscontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  gap: 5px;
+}
+
+.userprofilepic {
+  height: 100%;
+  width: 100%;
+}
+
+.followbtn {
+  background: var(--blue);
+  padding: var(--border-radius-2);
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: var(--primary-white);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
