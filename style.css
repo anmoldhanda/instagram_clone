@@ -191,13 +191,13 @@ p {
 }
 
 .loggedinuserprofilecontainer,
-.usersuggestionprofilecard {
+.usersuggestion-profilecard {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.loggedinuserdetailscontainer {
+.loggedin-userdetails-container {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -254,13 +254,13 @@ p {
   color: var(--feedtext);
 }
 
-.usersuggestionprofilecontainer {
+.users-suggestion-profile-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.usersuggestionprofilecontainer .loggedinusernametitle {
+.users-suggestion-profile-container .loggedinusernametitle {
   font-size: 0.8rem;
 }
 
@@ -307,12 +307,12 @@ p {
   flex-direction: column;
 }
 
-.usersuggestionviewprofilecontainer {
+/* .usersuggestion-profiledetails-maincontainer {
   position: absolute;
   right: 0;
-}
+} */
 
-.usersuggestionviewprofilecards {
+.usersuggestion-profiledetails-cards {
   padding: var(--border-radius-3);
   border: 2px solid var(--lightgrey);
   border-radius: 10px;
@@ -325,29 +325,21 @@ p {
   /* margin: 1rem 0; */
 }
 
-.usersuggestionprofile1,
-.usersuggestionprofile2,
-.usersuggestionprofile3,
-.usersuggestionprofile4 {
-  display: none;
-  transition: all 0.3s ease;
-}
-
-.usersuggestionprofiledetailscontainer {
+.usersuggestion-profiledetails-container {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.followersactivitydetailscontainer {
+.followers-activity-details-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
 }
 
-.suggesteduserposts,
-.suggesteduserfollowings,
-.suggesteduserfollowers {
+.suggested-users-posts,
+.suggested-users-following,
+.suggested-users-followers {
   text-align: center;
   text-transform: capitalize;
 }
