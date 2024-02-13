@@ -130,8 +130,8 @@ p {
 }
 
 .photobox .profilepicsidebar {
-  height: 3rem;
-  width: 3rem;
+  height: 3.7rem;
+  width: 3.7rem;
   border-radius: 50px;
   border: 2px solid var(--primary-black);
 }
@@ -349,7 +349,7 @@ p {
   background-color: var(--darkgrey);
   /* border: 1px solid var(--darkgrey); */
   position: absolute;
-  top: 4rem;
+  top: 5rem;
 }
 
 .followers-activity-details-container::after {
@@ -360,7 +360,7 @@ p {
   background-color: var(--darkgrey);
   /* border: 1px solid var(--darkgrey); */
   position: absolute;
-  top: 8rem;
+  top: 9rem;
 }
 
 .suggested-users-posts,
@@ -406,8 +406,70 @@ p {
   transition: all 0.3s ease;
 }
 
-.photobox {
+.usersuggestion-profilecard .photobox {
   border-radius: 50%;
   background: linear-gradient(var(--lineargradient));
   padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 3.2rem;
+  width: 3.2rem; */
+}
+
+/* ====================== feed content main section ====================== */
+.feedcontentmaincontainer {
+  padding: var(--card-border-radius) var(--card-padding);
+}
+
+.story-scroll-container {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.stories-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.story .photobox {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(var(--lineargradient));
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.storyscrollbtns {
+  background: #fff;
+  color: #999;
+  border-radius: 50%;
+  padding: 3px 7px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 10px #999;
+  position: relative;
+  bottom: 0.5rem;
+  border: none;
+}
+
+.story .storyusername {
+  white-space: nowrap;
+  width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
 }

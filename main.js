@@ -55,3 +55,30 @@ fourthprofileusername.addEventListener("mouseover", () => {
 fourthprofileusername.addEventListener("mouseout", () => {
   fourthprofileusernamedetails.classList.remove("showhide");
 });
+
+// ========================= move story slider in right left positions =========================
+const storyscrollcontainer = document.querySelector(".story-scroll-container");
+const storiescontainer = document.querySelector(".stories-container");
+let scrollstoryleft = document.getElementById("scrollstoryleft");
+let scrollstoryright = document.getElementById("scrollstoryright");
+let currentscrollpositions = 0;
+let scrollamount = 320;
+let maxscroll =
+  -storiescontainer.offsetWidth + storyscrollcontainer.offsetWidth;
+scrollstoryleft.style.opacity = 0;
+function scrollhorizontally(inputdirection) {
+  currentscrollpositions += inputdirection * scrollamount;
+  if (currentscrollpositions > 0) {
+    currentscrollpositions = 0;
+    scrollstoryright.style.opacity = 0;
+  } else {
+    scrollstoryright.style.opacity = 1;
+  }
+  if (currentscrollpositions < maxscroll) {
+    currentscrollpositions = maxscroll;
+    scrollstoryleft.style.opacity = 0;
+  } else {
+    scrollstoryleft.style.opacity = 1;
+  }
+  storiescontainer.style.left = currentscrollpositions + "px";
+}
