@@ -65,9 +65,10 @@ let currentscrollpositions = 0;
 let scrollamount = 320;
 let maxscroll =
   -storiescontainer.offsetWidth + storyscrollcontainer.offsetWidth;
+// by default the left icon needs to hide itself if the user's haven't scrolled anything yet
 scrollstoryleft.style.opacity = 0;
-function scrollhorizontally(inputdirection) {
-  currentscrollpositions += inputdirection * scrollamount;
+function scrollhorizontally(inputscrolldirection) {
+  currentscrollpositions += inputscrolldirection * scrollamount;
   if (currentscrollpositions > 0) {
     currentscrollpositions = 0;
     scrollstoryright.style.opacity = 0;
@@ -82,3 +83,8 @@ function scrollhorizontally(inputdirection) {
   }
   storiescontainer.style.left = currentscrollpositions + "px";
 }
+
+const postcommentinputfield = document.getElementById("postcommentinputfield");
+postcommentinputfield.addEventListener("keyup", (e) => {
+  console.log(postcommentinputfield.value);
+});

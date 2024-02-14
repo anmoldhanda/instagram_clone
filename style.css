@@ -93,7 +93,7 @@ p {
   width: 99%;
   margin: 0 auto;
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* ====================== sidebar menu ====================== */
@@ -122,16 +122,16 @@ p {
   background: var(--lightgrey);
 }
 
-.sidebarlinks .photobox .profilepicsidebar {
+.sidebarlinks .photobox .profilepic {
   height: 2rem;
   width: 2rem;
   border-radius: 50px;
   border: 2px solid var(--primary-black);
 }
 
-.photobox .profilepicsidebar {
-  height: 3.7rem;
-  width: 3.7rem;
+.loggedinuserprofilecontainer .photobox .profilepic {
+  height: 3rem;
+  width: 3rem;
   border-radius: 50px;
   border: 2px solid var(--primary-black);
 }
@@ -274,8 +274,8 @@ p {
 
 .navigationlinkscontainer {
   padding: var(--card-border-radius) 0;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -320,10 +320,12 @@ p {
   position: relative;
   right: 1.3rem;
   display: none;
+  z-index: 1;
+  background: var(--primary-black);
   /* margin: 1rem 0; */
 }
 
-.suggesteduseractiviety {
+.suggested-user-activity {
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -408,13 +410,20 @@ p {
 
 .usersuggestion-profilecard .photobox {
   border-radius: 50%;
-  background: linear-gradient(var(--lineargradient));
+  /* background: linear-gradient(var(--lineargradient)); */
   padding: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 3.2rem;
-  width: 3.2rem; */
+  height: 3.3rem;
+  width: 3.3rem;
+}
+
+.usersuggestion-profilecard .photobox .profilepic {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--primary-black);
+  border-radius: 50px;
 }
 
 /* ====================== feed content main section ====================== */
@@ -430,6 +439,7 @@ p {
   position: relative;
   overflow: hidden;
   padding: 2rem 0;
+  margin: 0 0 2rem;
 }
 
 .stories-container {
@@ -453,6 +463,14 @@ p {
   justify-content: center;
 }
 
+.suggested-user-activity .photobox .profilepic,
+.story .photobox .profilepic {
+  height: 3.7rem;
+  width: 3.7rem;
+  border-radius: 50px;
+  border: 2px solid var(--primary-black);
+}
+
 .storyscrollbtns {
   background: #fff;
   color: #999;
@@ -464,6 +482,7 @@ p {
   position: relative;
   bottom: 0.5rem;
   border: none;
+  margin: 0 1rem;
 }
 
 .story .storyusername {
@@ -472,4 +491,112 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: normal;
+}
+
+.posts-container {
+  border-bottom: 1px solid var(--feedtext);
+  /* min-height: 100vh; */
+  width: 80%;
+  display: block;
+  margin: 1rem auto;
+}
+
+.posts-maincontent-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.posted-userdetails-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.posted-userdetails-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.posted-userdetails-box .photobox .profilepic {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50px;
+}
+
+.userdetails-inner-box .location {
+  text-transform: capitalize;
+}
+
+.timestamp {
+  color: var(--feedtext);
+  font-weight: bold;
+}
+
+.timestamp::before {
+  content: ".";
+  position: relative;
+  bottom: 0.1rem;
+}
+
+.posted-userdetails-box .photobox {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  background: linear-gradient(var(--lineargradient));
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.post-activity-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-activity-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.posts-otheroptions-container svg,
+.likeicon,
+.commenticon,
+.shareicon,
+.saveicon {
+  cursor: pointer;
+}
+
+.currentlikesactivity,
+.userpostcaptioncontainer {
+  display: flex;
+  align-items: center;
+}
+
+.usercaptiontext {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: text;
+}
+
+.captions-otherdetails-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#postcommentinputfield {
+  width: 100%;
+  background: var(--primary-black);
+  color: var(--primary-white);
+  /* border-bottom: 1px solid var(--feedtext); */
+  padding: 0 0 15px;
 }
