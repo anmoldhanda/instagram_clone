@@ -84,7 +84,27 @@ function scrollhorizontally(inputscrolldirection) {
   storiescontainer.style.left = currentscrollpositions + "px";
 }
 
-const postcommentinputfield = document.getElementById("postcommentinputfield");
-postcommentinputfield.addEventListener("keyup", (e) => {
-  console.log(postcommentinputfield.value);
-});
+const allpostcommentinputcontainers = document.getElementsByClassName(
+  "post-comment-input-container"
+);
+Array.from(allpostcommentinputcontainers).forEach(
+  (singlepostcommentinputcontainer) => {
+    // ============== get particular's post's comment input field from post comment container ==============
+    const postcommentinputfield = singlepostcommentinputcontainer.querySelector(
+      ".post-comment-inputfield"
+    );
+    const postcommentbtn = document.createElement("button");
+    postcommentbtn.className = "postcommentsbtn";
+    postcommentbtn.textContent = "post";
+    // ==================== append the postcommentbtn to each postcommentinputcontainer ====================
+    singlepostcommentinputcontainer.appendChild(postcommentbtn);
+    postcommentinputfield.onkeyup = function () {
+      if (postcommentinputfield.value.trim() === "") {
+        // =================== check if input field's value is not empty from right left ===================
+        postcommentbtn.style.display = "none";
+      } else {
+        postcommentbtn.style.display = "block";
+      }
+    };
+  }
+);
