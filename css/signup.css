@@ -1,0 +1,165 @@
+body {
+  background: var(--primary-white);
+  color: var(--primary-black);
+}
+
+.signupmaincontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: var(--border-radius-3) 0;
+}
+
+.signupcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  border: 1px solid var(--loginsignupline);
+  padding: var(--card-border-radius);
+  max-width: 25vw;
+}
+
+.signupinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.instagram-text-logo {
+  height: 4em;
+  width: 14em;
+}
+
+.signupheadline {
+  color: var(--darkgrey);
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.login-with-facebook-btn {
+  background: var(--lightblue);
+  color: var(--primary-white);
+  padding: var(--border-radius-1) var(--border-radius-3);
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+  /* display: block;
+  margin: 0 auto; */
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.signupcontentbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.or-div {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.or-div .or-text {
+  color: var(--darkgrey);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: text;
+  text-transform: uppercase;
+}
+
+.or-div .rightline {
+  background: var(--loginsignupline);
+  height: 1px;
+  width: 45%;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+}
+
+.or-div .leftline {
+  background: var(--loginsignupline);
+  height: 1px;
+  width: 45%;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+}
+
+.floating-labels {
+  position: relative;
+  margin: 10px 0;
+}
+
+.inputfields {
+  width: 22vw;
+  border: 1px solid var(--loginsignupline);
+  padding: 5px;
+}
+
+.inputfields:focus {
+  border: 1px solid var(--feedtext);
+}
+
+.input-labels {
+  position: absolute;
+  left: 0.5em;
+  font-size: 1em;
+  color: var(--darkgrey);
+  bottom: 0.5em;
+}
+
+.privacy-policy-terms-conditions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.signupmaincontainer p {
+  color: var(--darkgrey);
+}
+
+.link {
+  color: var(--blue);
+}
+
+.privacy-policy-terms-conditions-container + .login-with-facebook-btn {
+  background-color: #4bb4f8;
+}
+
+.have-an-account-container {
+  border: 1px solid var(--loginsignupline);
+  padding: var(--border-radius-3);
+  width: 100%;
+  text-align: center;
+}
+
+.have-an-account-container p {
+  color: var(--primary-black);
+  text-transform: capitalize;
+}
+
+.have-an-account-container a {
+  font-weight: bold;
+}
