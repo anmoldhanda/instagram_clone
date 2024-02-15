@@ -4,10 +4,10 @@ body {
 }
 
 .signupmaincontainer {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -45%);
+  transform: translate(-50%, -50%); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,6 +136,7 @@ body {
   margin: 1rem 0;
 }
 
+.footer-main-container .nav-links .nav-item a,
 .signupmaincontainer p {
   color: var(--darkgrey);
 }
@@ -144,6 +145,7 @@ body {
   color: var(--blue);
 }
 
+.floating-labels + .login-with-facebook-btn,
 .privacy-policy-terms-conditions-container + .login-with-facebook-btn {
   background-color: #4bb4f8;
 }
@@ -151,7 +153,7 @@ body {
 .have-an-account-container {
   border: 1px solid var(--loginsignupline);
   padding: var(--border-radius-3);
-  width: 100%;
+  min-width: 25vw;
   text-align: center;
 }
 
@@ -162,4 +164,74 @@ body {
 
 .have-an-account-container a {
   font-weight: bold;
+}
+
+.get-the-app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* border: 1px solid var(--loginsignupline); */
+  padding: var(--border-radius-3);
+  min-width: 25vw;
+}
+
+.get-the-app-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.get-the-app-pic {
+  height: 2.5rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.get-the-app-headline {
+  color: var(--primary-black);
+  text-transform: capitalize;
+}
+
+.footer-main-container {
+  border-top: 1px solid var(--loginsignupline);
+  width: 100%;
+  padding: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-main-container .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-main-container .nav-links .nav-item {
+  color: var(--darkgrey);
+  list-style-type: none;
+}
+
+.login-with-facebook-forgot-password-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-with-facebook-forgot-password-container .login-with-facebook-btn {
+  background: transparent;
+  color: var(--blue);
+}
+
+.forgot-password-link {
+  color: var(--blue);
+  text-transform: capitalize;
 }
