@@ -6,7 +6,7 @@
     <title>Login • Instagram</title>
     <!-- ====================== custom css ====================== -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/signup.css" />
+    <link rel="stylesheet" href="css/loginsignup.css" />
     <!-- ====================== fontawesome icons ====================== -->
     <link
       rel="stylesheet"
@@ -19,93 +19,114 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="signupmaincontainer">
-      <div class="signupcontainer">
-        <div class="signupinner">
-          <div class="logodiv">
-            <img
-              src="images/instagram-text-logo.png"
-              alt="instagram text logo"
-              class="instagram-text-logo"
-            />
-          </div>
-          <form action="#" method="post" class="signupform">
-            <div class="floating-labels">
-              <input
-                type="text"
-                name="emailorphoneorusername"
-                class="inputfields"
+    <div class="signup-login-main-pic-container">
+      <div class="side-photo-container">
+        <img
+          src="images/loginpagepic1.png"
+          alt="phone pic"
+          class="first-signup-login-pagepic"
+        />
+        <img
+          src="images/loginpagepic2.png"
+          alt="phone pic"
+          class="second-signup-login-pagepic"
+        />
+      </div>
+      <div class="signupmaincontainer">
+        <div class="signup-login-detailsbox-container">
+          <div class="signupinner">
+            <div class="logodiv">
+              <img
+                src="images/instagram-text-logo.png"
+                alt="instagram text logo"
+                class="instagram-text-logo"
               />
-              <span class="input-labels">Phone Number, username, or email</span>
             </div>
-            <div class="floating-labels">
-              <input type="password" name="userpassword" class="inputfields" />
-              <span class="input-labels">Password</span>
+            <form action="#" method="post" class="login-form">
+              <div class="floating-labels">
+                <input
+                  type="text"
+                  name="emailorphoneorusername"
+                  class="inputfields"
+                />
+                <span class="input-labels"
+                  >Phone Number, username, or email</span
+                >
+              </div>
+              <div class="floating-labels">
+                <input
+                  type="password"
+                  name="userpassword"
+                  class="inputfields"
+                />
+                <span class="input-labels">Password</span>
+              </div>
+              <button class="login-with-facebook-btn">log in</button>
+            </form>
+            <div class="or-div">
+              <div class="rightline"></div>
+              <div class="or-text">or</div>
+              <div class="leftline"></div>
             </div>
-            <button class="login-with-facebook-btn">log in</button>
-          </form>
-          <div class="or-div">
-            <div class="rightline"></div>
-            <div class="or-text">or</div>
-            <div class="leftline"></div>
+            <div class="login-with-facebook-forgot-password-container">
+              <button class="login-with-facebook-btn">
+                <i class="fa-brands fa-facebook-square"></i> log in with
+                facebook
+              </button>
+              <a href="#" class="forgot-password-link">forgot password?</a>
+            </div>
           </div>
-          <div class="login-with-facebook-forgot-password-container">
-            <button class="login-with-facebook-btn">
-              <i class="fa-brands fa-facebook-square"></i> log in with facebook
-            </button>
-            <a href="#" class="forgot-password-link">forgot password?</a>
+        </div>
+        <div class="have-an-account-container">
+          <p class="have-an-account-login-box">
+            don't have an account <a href="signup.html" class="link">sign up</a>
+          </p>
+        </div>
+        <div class="get-the-app-container">
+          <div class="get-the-app-headline-box">
+            <p class="get-the-app-headline">get the app.</p>
+          </div>
+          <div class="get-the-app-inner">
+            <div class="appstore-box">
+              <img
+                src="images/appstore.png"
+                alt="appstore link to download instagram app"
+                class="get-the-app-pic"
+              />
+            </div>
+            <div class="playstore-box">
+              <img
+                src="images/playstore.png"
+                alt="google playstore link to download instagram app"
+                class="get-the-app-pic"
+              />
+            </div>
           </div>
         </div>
       </div>
-      <div class="have-an-account-container">
-        <p class="have-an-account-login-box">
-          don't have an account <a href="signup.html" class="link">sign up</a>
-        </p>
-      </div>
-      <div class="get-the-app-container">
-        <div class="get-the-app-headline-box">
-          <p class="get-the-app-headline">get the app.</p>
-        </div>
-        <div class="get-the-app-inner">
-          <div class="appstore-box">
-            <img
-              src="images/appstore.png"
-              alt="appstore link to download instagram app"
-              class="get-the-app-pic"
-            />
-          </div>
-          <div class="playstore-box">
-            <img
-              src="images/playstore.png"
-              alt="google playstore link to download instagram app"
-              class="get-the-app-pic"
-            />
-          </div>
-        </div>
-      </div>
-      <footer class="footer-main-container">
-        <nav class="footer-navigation">
-          <ul class="nav-links">
-            <li class="nav-item"><a href="#">Meta</a></li>
-            <li class="nav-item"><a href="#">Blog</a></li>
-            <li class="nav-item"><a href="#">Jobs</a></li>
-            <li class="nav-item"><a href="#">Help</a></li>
-            <li class="nav-item"><a href="#">API</a></li>
-            <li class="nav-item"><a href="#">Privacy</a></li>
-            <li class="nav-item"><a href="#">Terms</a></li>
-            <li class="nav-item"><a href="#">Locations</a></li>
-            <li class="nav-item"><a href="#">Instagram Lite</a></li>
-            <li class="nav-item"><a href="#">Threads</a></li>
-            <li class="nav-item">
-              <a href="#">Contact Uploading & Non-Users</a>
-            </li>
-            <li class="nav-item"><a href="#">Meta Verified</a></li>
-          </ul>
-        </nav>
-        <p class="copyright-text">© 2024 instagram from meta</p>
-      </footer>
     </div>
+    <footer class="footer-main-container">
+      <nav class="footer-navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#">Meta</a></li>
+          <li class="nav-item"><a href="#">Blog</a></li>
+          <li class="nav-item"><a href="#">Jobs</a></li>
+          <li class="nav-item"><a href="#">Help</a></li>
+          <li class="nav-item"><a href="#">API</a></li>
+          <li class="nav-item"><a href="#">Privacy</a></li>
+          <li class="nav-item"><a href="#">Terms</a></li>
+          <li class="nav-item"><a href="#">Locations</a></li>
+          <li class="nav-item"><a href="#">Instagram Lite</a></li>
+          <li class="nav-item"><a href="#">Threads</a></li>
+          <li class="nav-item">
+            <a href="#">Contact Uploading & Non-Users</a>
+          </li>
+          <li class="nav-item"><a href="#">Meta Verified</a></li>
+        </ul>
+      </nav>
+      <p class="copyright-text">© 2024 instagram from meta</p>
+    </footer>
     <!-- ====================== custom js ====================== -->
-    <script src="js/main.js"></script>
+    <script src="js/inputfields.js"></script>
   </body>
 </html>

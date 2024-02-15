@@ -3,6 +3,32 @@ body {
   color: var(--primary-black);
 }
 
+.signup-login-main-pic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-photo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.first-signup-login-pagepic {
+  height: 100vh;
+  width: 30vw;
+}
+
+.second-signup-login-pagepic {
+  height: 86vh;
+  width: 17vw;
+  position: absolute;
+  right: 3rem;
+  top: 1rem;
+}
+
 .signupmaincontainer {
   /* position: absolute;
   top: 50%;
@@ -16,7 +42,7 @@ body {
   padding: var(--border-radius-3) 0;
 }
 
-.signupcontainer {
+.signup-login-detailsbox-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,14 +131,14 @@ body {
 }
 
 .floating-labels {
-  position: relative;
+  /* position: relative; */
   margin: 10px 0;
 }
 
 .inputfields {
   width: 22vw;
   border: 1px solid var(--loginsignupline);
-  padding: 5px;
+  padding: 10px;
 }
 
 .inputfields:focus {
@@ -120,11 +146,17 @@ body {
 }
 
 .input-labels {
-  position: absolute;
-  left: 0.5em;
+  position: relative;
+  left: 1em;
   font-size: 1em;
   color: var(--darkgrey);
-  bottom: 0.5em;
+  bottom: 2.3em;
+}
+
+.input-labels.focused {
+  position: relative;
+  font-size: 0.9em;
+  bottom: 3.5em;
 }
 
 .privacy-policy-terms-conditions-container {
