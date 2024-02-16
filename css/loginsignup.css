@@ -145,18 +145,28 @@ body {
   border: 1px solid var(--feedtext);
 }
 
+#inputemailorphoneorusername.errorinputemailorphoneorusername,
+#inputemailorphone.errorinputemailorphone,
+#inputname.errorinputname,
+#inputusername.errorinputusername,
+#inputpassword.errorinputpassword {
+  border: 1px solid crimson;
+}
+
 .input-labels {
   position: relative;
   left: 1em;
   font-size: 1em;
   color: var(--darkgrey);
   bottom: 2.3em;
+  display: none;
 }
 
 .input-labels.focused {
   position: relative;
   font-size: 0.9em;
   bottom: 3.5em;
+  display: inline-block;
 }
 
 .privacy-policy-terms-conditions-container {
