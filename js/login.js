@@ -56,8 +56,46 @@ loginform.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validinputemailorphoneorusername && validinputpassword) {
     console.log("ok");
-    location.href = "index.html";
-    loginform.reset();
+    let storemailorphoneorusername = inputemailorphoneorusername.value;
+    let storepassword = inputpassword.value;
+    let formdatabase = JSON.parse(localStorage.getItem("signupdatabase"))
+      ? JSON.parse(localStorage.getItem("signupdatabase"))
+      : [];
+    if (
+      formdatabase.some((registereduser) => {
+        return (
+          (registereduser.emailorphone === storemailorphoneorusername ||
+            registereduser.username === storemailorphoneorusername) &&
+          registereduser.password === storepassword
+        );
+      })
+    ) {
+      console.log("user is registered with us");
+      let storecurrentuserlogindetails = formdatabase.find(
+        (currentuserdetails) => {
+          return (
+            // currentuserdetails.username === storemailorphoneorusername &&
+            // currentuserdetails.password === storepassword
+            (currentuserdetails.emailorphone === storemailorphoneorusername ||
+              currentuserdetails.username === storemailorphoneorusername) &&
+            currentuserdetails.password === storepassword
+          );
+        }
+      );
+      if (storecurrentuserlogindetails) {
+        localStorage.setItem(
+          "currentuserdetails",
+          storecurrentuserlogindetails.username
+        );
+        location.href = "index.html";
+        loginform.reset();
+      }
+    } else {
+      console.log(
+        "user isn't registered with us to login the portal signup first"
+      );
+      loginform.reset();
+    }
   } else {
     console.log("not ok");
     loginform.reset();

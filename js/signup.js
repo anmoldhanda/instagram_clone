@@ -78,8 +78,35 @@ signupform.addEventListener("submit", (e) => {
     validinputpassword
   ) {
     console.log("ok");
-    signupform.reset();
-    location.href = "login.html";
+    let storemailorphone = inputemailorphone.value;
+    let storename = inputname.value;
+    let storeusername = inputusername.value;
+    let storepassword = inputpassword.value;
+    let formdatabase = JSON.parse(localStorage.getItem("signupdatabase"))
+      ? JSON.parse(localStorage.getItem("signupdatabase"))
+      : [];
+    if (
+      formdatabase.some((duplicatedataentry) => {
+        return (
+          duplicatedataentry.emailorphone === storemailorphone ||
+          duplicatedataentry.username === storeusername
+        );
+      })
+    ) {
+      console.log("user with credentials already exists on portal");
+      signupform.reset();
+    } else {
+      let formdataentry = {
+        emailorphone: storemailorphone,
+        name: storename,
+        username: storeusername,
+        password: storepassword,
+      };
+      formdatabase.push(formdataentry);
+      localStorage.setItem("signupdatabase", JSON.stringify(formdatabase));
+      signupform.reset();
+      location.href = "login.html";
+    }
   } else {
     console.log("not ok");
     signupform.reset();

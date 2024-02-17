@@ -131,7 +131,7 @@ body {
 }
 
 .floating-labels {
-  /* position: relative; */
+  position: relative;
   margin: 10px 0;
 }
 
@@ -145,13 +145,13 @@ body {
   border: 1px solid var(--feedtext);
 }
 
-#inputemailorphoneorusername.errorinputemailorphoneorusername,
+/* #inputemailorphoneorusername.errorinputemailorphoneorusername,
 #inputemailorphone.errorinputemailorphone,
 #inputname.errorinputname,
 #inputusername.errorinputusername,
 #inputpassword.errorinputpassword {
   border: 1px solid crimson;
-}
+} */
 
 .input-labels {
   position: relative;
@@ -160,6 +160,22 @@ body {
   color: var(--darkgrey);
   bottom: 2.3em;
   display: none;
+}
+
+.showhidepasswordbtn {
+  background: transparent;
+  color: var(--darkgrey);
+  font-weight: bold;
+  text-transform: capitalize;
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
+  cursor: pointer;
+  display: none;
+}
+
+.showhidepasswordbtn:hover {
+  color: var(--feedtext);
 }
 
 .input-labels.focused {
