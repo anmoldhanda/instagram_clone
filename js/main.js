@@ -108,3 +108,20 @@ Array.from(allpostcommentinputcontainers).forEach(
     };
   }
 );
+
+const currentloggedinusername = document.getElementById(
+  "currentloggedinusername"
+);
+const logoutbtn = document.getElementById("logoutbtn");
+
+let currentloggedinuser = localStorage.getItem("currentuserdetails")
+  ? localStorage.getItem("currentuserdetails")
+  : "";
+currentloggedinusername.innerHTML = currentloggedinuser;
+if (currentloggedinuser == "") {
+  location.href = "login.html";
+}
+logoutbtn.onclick = function () {
+  location.href = "login.html";
+  localStorage.removeItem("currentuserdetails");
+};

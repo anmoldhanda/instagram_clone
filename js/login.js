@@ -51,6 +51,13 @@ inputpassword.addEventListener("blur", (e) => {
   }
 });
 
+let currentloggedinuser = localStorage.getItem("currentuserdetails")
+  ? localStorage.getItem("currentuserdetails")
+  : "";
+if (currentloggedinuser != "") {
+  location.href = "index.html";
+}
+
 const loginform = document.querySelector(".loginform");
 loginform.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -74,8 +81,6 @@ loginform.addEventListener("submit", (e) => {
       let storecurrentuserlogindetails = formdatabase.find(
         (currentuserdetails) => {
           return (
-            // currentuserdetails.username === storemailorphoneorusername &&
-            // currentuserdetails.password === storepassword
             (currentuserdetails.emailorphone === storemailorphoneorusername ||
               currentuserdetails.username === storemailorphoneorusername) &&
             currentuserdetails.password === storepassword

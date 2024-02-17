@@ -644,3 +644,11 @@ p {
   font-weight: 500;
   cursor: pointer;
 }
+
+#logoutbtn {
+  background: var(--popup);
+  color: var(--popuptext);
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 100%;
+}
