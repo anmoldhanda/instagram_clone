@@ -49,9 +49,13 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 0.88rem;
   user-select: none;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background: var(--primary-black);
   color: var(--primary-white);
+}
+
+body.active {
+  overflow: hidden;
 }
 
 a {
@@ -126,6 +130,7 @@ p {
   border-radius: 10px;
 }
 
+#logoutbtn:hover,
 .sidebarlinks:hover {
   background: var(--lightgrey);
 }
@@ -651,4 +656,141 @@ p {
   text-transform: capitalize;
   cursor: pointer;
   width: 100%;
+}
+
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: none;
+  z-index: 2;
+}
+
+/* .overlay-content {
+  position: relative;
+} */
+
+.crossicon-overlay {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.createpost-popupcontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--popup);
+  color: var(--popuptext);
+  border-radius: var(--border-radius-3);
+  /* padding: 0 var(--border-radius-3); */
+  min-width: 50vw;
+}
+
+.createpost-popupcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.createpost-popupcontent .profilepic {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50px;
+}
+
+.createpost-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--lightgrey);
+  padding: var(--border-radius-2) var(--border-radius-3);
+}
+
+#postcaption {
+  background: var(--popup);
+  color: var(--popuptext);
+  padding: 5px 8px;
+  display: block;
+  width: 100%;
+  resize: none;
+  border-radius: var(--border-radius-3);
+}
+
+#input-post-location-address {
+  background: var(--popup);
+  color: var(--popuptext);
+  padding: 5px 8px;
+  width: 100%;
+}
+
+.postcaption-maincontainer .userdetails-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postcaption-maincontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--border-radius-2) 0;
+  width: 25vw;
+}
+
+.inputfile-postcontainer {
+  display: block;
+  width: 25vw;
+}
+
+.inputfilecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sharepostbtn {
+  background: transparent;
+  color: var(--blue);
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#sharepostbtn:hover {
+  color: var(--primary-white);
+}
+
+.fake-inputfile-btn {
+  background: var(--lightblue);
+  color: var(--primary-white);
+  text-transform: capitalize;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selectedimagefilepost {
+  border-radius: 0 0 0 var(--border-radius-3);
+  max-height: 50vh;
+}
+
+.inputfields {
+  position: relative;
+}
+
+.inputfields svg {
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }

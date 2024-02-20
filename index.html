@@ -227,7 +227,7 @@
               </svg>
               <h2 class="sidebarlinktext">notifications</h2></a
             >
-            <a href="#" class="sidebarlinks"
+            <a href="#" class="sidebarlinks createpostpopupbtn"
               ><svg
                 aria-label="New post"
                 class="x1lliihq x1n2onr6 x5n08af"
@@ -863,7 +863,9 @@
                 </div>
                 <div class="post-comments-container">
                   <div class="post-comment-input-container">
-                    <input type="text" name="postcomment" placeholder="Add a Comment..." class="post-comment-inputfield">
+                    <form action="#" method="post" class="postcommentsform">
+                      <input type="text" name="postcomment" placeholder="Add a Comment..." class="post-comment-inputfield">
+                    </form>
                   </div>
                 </div>
               </div>
@@ -1019,7 +1021,9 @@
                 </div>
                 <div class="post-comments-container">
                   <div class="post-comment-input-container">
-                    <input type="text" name="postcomment" placeholder="Add a Comment..." class="post-comment-inputfield">
+                    <form action="#" method="post" class="postcommentsform">
+                      <input type="text" name="postcomment" placeholder="Add a Comment..." class="post-comment-inputfield">
+                    </form>
                   </div>
                 </div>
               </div>
@@ -1041,7 +1045,7 @@
             </div>
             <div class="loggeduserdetails">
               <h4 class="loggedinusername" id="currentloggedinusername"></h4>
-              <p class="loggedinusernametitle">anmol dhanda</p>
+              <p class="loggedinusernametitle" id="current-loggedin-user-nickname">anmol dhanda</p>
             </div>
           </div>
           <div class="logoutswitchcontainer">
@@ -1623,6 +1627,53 @@
           <p class="copyrightheadline">&copy; 2024 instagram from meta</p>
         </div>
       </section>
+    </div>
+          <!-- ====================== create post popup ====================== -->
+    <div class="overlay-container">
+      <div class="overlay-content">
+        <div class="crossicon-overlay">
+          <svg aria-label="Close" class="x1lliihq x1n2onr6 x9bdzbf" fill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Close</title><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+        </div>
+        <div class="createpost-popupcontainer">
+          <div class="createpost-popup-header">
+            <div class="changeposticon-stepback">
+              <svg aria-label="Back" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Back</title><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.909" x2="22.001" y1="12.004" y2="12.004"></line><polyline fill="none" points="9.276 4.726 2.001 12.004 9.276 19.274" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline></svg>
+            </div>
+            <h2 class="createpost-popupheadline">create new post</h2>
+            <button id="sharepostbtn">share</button>
+          </div>
+          <div class="createpost-popupcontent">
+            <div class="inputfile-postcontainer">
+              <form enctype="multipart/form-data" action="#" method="post" id="createpostform">
+                <div class="inputfilecontainer">
+                  <input type="file" accept="image/jpg, image/png, image/jpeg" name="inputpost" id="inputfile" hidden>
+                  <button type="button" class="fake-inputfile-btn">select from computer</button>
+                  <!-- <span class="fake-inputfile-indicator">no file selected</span> -->
+                </div>
+              </form>
+            </div>
+            <div class="postcaption-maincontainer">
+              <div class="userdetails-container">
+                <div class="photobox">
+                  <img src="images/profilepic.jpg" alt="user profile pic" class="profilepic">
+                </div>
+                <div class="usernamebox">
+                  <p class="usernametext">dhanda_anmol02</p>
+                </div>
+              </div>
+                <form action="#" method="post" class="postcaption-form">
+                  <div class="inputpostcaptionfield">
+                    <textarea name="postcaption" id="postcaption" cols="30" rows="10" placeholder="Write a caption...."></textarea>
+                  </div>
+                  <div class="inputfields">
+                    <input type="text" name="location" id="input-post-location-address" placeholder="Add Location">
+                    <svg aria-label="Add location" class="x1lliihq x1n2onr6 x1roi4f4" fill="currentColor" height="16" role="img" viewBox="0 0 24 24" width="16"><title>Add location</title><path d="M12.053 8.105a1.604 1.604 0 1 0 1.604 1.604 1.604 1.604 0 0 0-1.604-1.604Zm0-7.105a8.684 8.684 0 0 0-8.708 8.66c0 5.699 6.14 11.495 8.108 13.123a.939.939 0 0 0 1.2 0c1.969-1.628 8.109-7.424 8.109-13.123A8.684 8.684 0 0 0 12.053 1Zm0 19.662C9.29 18.198 5.345 13.645 5.345 9.66a6.709 6.709 0 0 1 13.417 0c0 3.985-3.944 8.538-6.709 11.002Z"></path></svg>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- ====================== custom js ====================== -->
     <script src="js/main.js"></script>
