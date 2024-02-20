@@ -145,21 +145,12 @@ Array.from(allpostcommentinputcontainers).forEach(
 const currentloggedinusername = document.getElementById(
   "currentloggedinusername"
 );
-const currentloggedinusernickname = document.getElementById(
-  "current-loggedin-user-nickname"
-);
 const logoutbtn = document.getElementById("logoutbtn");
 
 let currentloggedinuser = localStorage.getItem("currentuserdetails")
   ? localStorage.getItem("currentuserdetails")
   : "";
-let currentloggedinusernicknametext = JSON.parse(
-  localStorage.getItem("signupdatabase")
-)[0].name
-  ? JSON.parse(localStorage.getItem("signupdatabase"))[0].name
-  : "";
 currentloggedinusername.innerHTML = currentloggedinuser;
-currentloggedinusernickname.innerHTML = currentloggedinusernicknametext;
 if (currentloggedinuser == "") {
   location.href = "login.html";
 }
