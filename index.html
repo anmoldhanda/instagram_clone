@@ -457,7 +457,9 @@
               <!-- <a href="#" class="sidebarlinks popuplinks">
                 <h2 class="sidebarlinktext">log out</h2>
               </a> -->
-              <button class="sidebarlinks popuplinks" id="logoutbtn">log out</button>
+              <button class="sidebarlinks popuplinks" id="logoutbtn">
+                log out
+              </button>
             </div>
           </div>
         </div>
@@ -713,7 +715,7 @@
         </div>
         <!-- ====================== user's posts content area ====================== -->
         <div class="posts-container">
-          <div class="posts">
+          <!-- <div class="posts">
             <div class="posts-maincontent-container">
               <div class="posted-userdetails-container">
                 <div class="posted-userdetails-box">
@@ -770,6 +772,7 @@
                         d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"
                       ></path>
                     </svg>
+                    <i class="fa-regular fa-heart"></i>
                   </div>
                   <div class="commenticon">
                     <svg
@@ -928,6 +931,7 @@
                         d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"
                       ></path>
                     </svg>
+                    <i class="fa-regular fa-heart"></i>
                   </div>
                   <div class="commenticon">
                     <svg
@@ -1028,7 +1032,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </main>
       <!-- ====================== suggestion area ====================== -->
@@ -1628,50 +1632,151 @@
         </div>
       </section>
     </div>
-          <!-- ====================== create post popup ====================== -->
+    <!-- ====================== create post popup ====================== -->
     <div class="overlay-container">
       <div class="overlay-content">
         <div class="crossicon-overlay">
-          <svg aria-label="Close" class="x1lliihq x1n2onr6 x9bdzbf" fill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Close</title><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+          <svg
+            aria-label="Close"
+            class="x1lliihq x1n2onr6 x9bdzbf"
+            fill="currentColor"
+            height="18"
+            role="img"
+            viewBox="0 0 24 24"
+            width="18"
+          >
+            <title>Close</title>
+            <polyline
+              fill="none"
+              points="20.643 3.357 12 12 3.353 20.647"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+            ></polyline>
+            <line
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              x1="20.649"
+              x2="3.354"
+              y1="20.649"
+              y2="3.354"
+            ></line>
+          </svg>
         </div>
         <div class="createpost-popupcontainer">
           <div class="createpost-popup-header">
             <div class="changeposticon-stepback">
-              <svg aria-label="Back" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Back</title><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.909" x2="22.001" y1="12.004" y2="12.004"></line><polyline fill="none" points="9.276 4.726 2.001 12.004 9.276 19.274" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline></svg>
+              <svg
+                aria-label="Back"
+                class="x1lliihq x1n2onr6 x5n08af"
+                fill="currentColor"
+                height="24"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <title>Back</title>
+                <line
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="2.909"
+                  x2="22.001"
+                  y1="12.004"
+                  y2="12.004"
+                ></line>
+                <polyline
+                  fill="none"
+                  points="9.276 4.726 2.001 12.004 9.276 19.274"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></polyline>
+              </svg>
             </div>
             <h2 class="createpost-popupheadline">create new post</h2>
             <button id="sharepostbtn">share</button>
           </div>
-          <div class="createpost-popupcontent">
+          <form
+            enctype="multipart/form-data"
+            action="#"
+            method="post"
+            id="createpostform"
+            class="createpost-popupcontent"
+          >
             <div class="inputfile-postcontainer">
-              <form enctype="multipart/form-data" action="#" method="post" id="createpostform">
-                <div class="inputfilecontainer">
-                  <input type="file" accept="image/jpg, image/png, image/jpeg" name="inputpost" id="inputfile" hidden>
-                  <button type="button" class="fake-inputfile-btn">select from computer</button>
-                  <!-- <span class="fake-inputfile-indicator">no file selected</span> -->
-                </div>
-              </form>
+              <!-- <form enctype="multipart/form-data" action="#" method="post" id="create-postphoto-form"> -->
+              <div class="inputfilecontainer">
+                <input
+                  type="file"
+                  accept="image/jpg, image/png, image/jpeg"
+                  name="inputpost"
+                  id="inputfile"
+                  class="inputfilepost"
+                  hidden
+                />
+                <button type="button" class="fake-inputfile-btn">
+                  select from computer
+                </button>
+                <!-- <span class="fake-inputfile-indicator">no file selected</span> -->
+              </div>
+              <!-- </form> -->
             </div>
             <div class="postcaption-maincontainer">
               <div class="userdetails-container">
                 <div class="photobox">
-                  <img src="images/profilepic.jpg" alt="user profile pic" class="profilepic">
+                  <img
+                    src="images/profilepic.jpg"
+                    alt="user profile pic"
+                    class="profilepic"
+                  />
                 </div>
                 <div class="usernamebox">
                   <p class="usernametext">dhanda_anmol02</p>
                 </div>
               </div>
-                <form action="#" method="post" class="postcaption-form">
-                  <div class="inputpostcaptionfield">
-                    <textarea name="postcaption" id="postcaption" cols="30" rows="10" placeholder="Write a caption...."></textarea>
-                  </div>
-                  <div class="inputfields">
-                    <input type="text" name="location" id="input-post-location-address" placeholder="Add Location">
-                    <svg aria-label="Add location" class="x1lliihq x1n2onr6 x1roi4f4" fill="currentColor" height="16" role="img" viewBox="0 0 24 24" width="16"><title>Add location</title><path d="M12.053 8.105a1.604 1.604 0 1 0 1.604 1.604 1.604 1.604 0 0 0-1.604-1.604Zm0-7.105a8.684 8.684 0 0 0-8.708 8.66c0 5.699 6.14 11.495 8.108 13.123a.939.939 0 0 0 1.2 0c1.969-1.628 8.109-7.424 8.109-13.123A8.684 8.684 0 0 0 12.053 1Zm0 19.662C9.29 18.198 5.345 13.645 5.345 9.66a6.709 6.709 0 0 1 13.417 0c0 3.985-3.944 8.538-6.709 11.002Z"></path></svg>
-                  </div>
-                </form>
+              <!-- <form action="#" method="post" class="postcaption-form"> -->
+              <div class="inputpostcaptionfield">
+                <textarea
+                  name="postcaption"
+                  id="inputpostcaption"
+                  cols="30"
+                  rows="10"
+                  placeholder="Write a caption...."
+                ></textarea>
+              </div>
+              <div class="inputfields">
+                <input
+                  type="text"
+                  name="location"
+                  id="input-post-location-address"
+                  placeholder="Add Location"
+                />
+                <svg
+                  aria-label="Add location"
+                  class="x1lliihq x1n2onr6 x1roi4f4"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="16"
+                >
+                  <title>Add location</title>
+                  <path
+                    d="M12.053 8.105a1.604 1.604 0 1 0 1.604 1.604 1.604 1.604 0 0 0-1.604-1.604Zm0-7.105a8.684 8.684 0 0 0-8.708 8.66c0 5.699 6.14 11.495 8.108 13.123a.939.939 0 0 0 1.2 0c1.969-1.628 8.109-7.424 8.109-13.123A8.684 8.684 0 0 0 12.053 1Zm0 19.662C9.29 18.198 5.345 13.645 5.345 9.66a6.709 6.709 0 0 1 13.417 0c0 3.985-3.944 8.538-6.709 11.002Z"
+                  ></path>
+                </svg>
+              </div>
+              <!-- </form> -->
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

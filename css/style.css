@@ -443,6 +443,7 @@ p {
 /* ====================== feed content main section ====================== */
 .feedcontentmaincontainer {
   padding: var(--card-border-radius) var(--card-padding);
+  min-width: 50vw;
 }
 
 .story-scroll-container {
@@ -547,6 +548,11 @@ p {
   border-radius: 50px;
 }
 
+.usersfeedcontentpost .userfeedpic {
+  width: 45vw;
+  height: auto;
+}
+
 .userdetails-inner-box .location {
   text-transform: capitalize;
 }
@@ -593,6 +599,17 @@ p {
 .shareicon,
 .saveicon {
   cursor: pointer;
+}
+
+.likeicon i {
+  font-size: var(--card-padding);
+  color: var(--primary-white);
+}
+
+.likeicon i.fa-solid {
+  color: crimson;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
 }
 
 .relateduser-likedby-activity,
@@ -715,7 +732,7 @@ p {
   padding: var(--border-radius-2) var(--border-radius-3);
 }
 
-#postcaption {
+#inputpostcaption {
   background: var(--popup);
   color: var(--popuptext);
   padding: 5px 8px;
@@ -782,7 +799,8 @@ p {
 
 .selectedimagefilepost {
   border-radius: 0 0 0 var(--border-radius-3);
-  max-height: 50vh;
+  height: 100%;
+  width: 100%;
 }
 
 .inputfields {
