@@ -51,8 +51,8 @@ inputpassword.addEventListener("blur", (e) => {
   }
 });
 
-let currentloggedinuser = localStorage.getItem("currentuserdetails")
-  ? localStorage.getItem("currentuserdetails")
+let currentloggedinuser = localStorage.getItem("Y3VycmVudHVzZXJkZXRhaWxz")
+  ? localStorage.getItem("Y3VycmVudHVzZXJkZXRhaWxz")
   : "";
 if (currentloggedinuser != "") {
   location.href = "index.html";
@@ -63,10 +63,11 @@ loginform.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validinputemailorphoneorusername && validinputpassword) {
     console.log("ok");
-    let storemailorphoneorusername = inputemailorphoneorusername.value;
-    let storepassword = inputpassword.value;
-    let formdatabase = JSON.parse(localStorage.getItem("signupdatabase"))
-      ? JSON.parse(localStorage.getItem("signupdatabase"))
+    let storemailorphoneorusername = btoa(inputemailorphoneorusername.value);
+    let storepassword = btoa(inputpassword.value);
+    // ==================== retrivieng the stored login credentials from client side in decrypted format ====================
+    let formdatabase = JSON.parse(localStorage.getItem("c2lnbnVwZGF0YWJhc2U="))
+      ? JSON.parse(localStorage.getItem("c2lnbnVwZGF0YWJhc2U="))
       : [];
     if (
       formdatabase.some((registereduser) => {
@@ -89,8 +90,9 @@ loginform.addEventListener("submit", (e) => {
         }
       );
       if (storecurrentuserlogindetails) {
+        // =================== stored the current user's login credentials in encryped format in client side ===================
         localStorage.setItem(
-          "currentuserdetails",
+          btoa("currentuserdetails"),
           storecurrentuserlogindetails.username
         );
         location.href = "index.html";

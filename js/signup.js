@@ -78,12 +78,12 @@ signupform.addEventListener("submit", (e) => {
     validinputpassword
   ) {
     console.log("ok");
-    let storemailorphone = inputemailorphone.value;
-    let storename = inputname.value;
-    let storeusername = inputusername.value;
-    let storepassword = inputpassword.value;
-    let formdatabase = JSON.parse(localStorage.getItem("signupdatabase"))
-      ? JSON.parse(localStorage.getItem("signupdatabase"))
+    let storemailorphone = btoa(inputemailorphone.value);
+    let storename = btoa(inputname.value);
+    let storeusername = btoa(inputusername.value);
+    let storepassword = btoa(inputpassword.value);
+    let formdatabase = JSON.parse(localStorage.getItem("c2lnbnVwZGF0YWJhc2U="))
+      ? JSON.parse(localStorage.getItem("c2lnbnVwZGF0YWJhc2U="))
       : [];
     if (
       formdatabase.some((duplicatedataentry) => {
@@ -102,8 +102,12 @@ signupform.addEventListener("submit", (e) => {
         username: storeusername,
         password: storepassword,
       };
+      // ============== stored the current user's signed up & login credentials in encryped format in client side ==============
       formdatabase.push(formdataentry);
-      localStorage.setItem("signupdatabase", JSON.stringify(formdatabase));
+      localStorage.setItem(
+        btoa("signupdatabase"),
+        JSON.stringify(formdatabase)
+      );
       signupform.reset();
       location.href = "login.html";
     }
