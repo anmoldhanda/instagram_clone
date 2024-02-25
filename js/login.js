@@ -71,6 +71,7 @@ loginform.addEventListener("submit", (e) => {
     if (
       formdatabase.some((registereduser) => {
         return (
+          // email or phone or username keys are different but their values can be entered inside the same input field so if the registereduser's emailorphone is equals to storemailoprphoneorusername or registereduser's username is equal to storemailorphoneorusername it is same which is it doesn't care if the user had logged in using it's emailid or phone as well as username
           (registereduser.emailorphone === storemailorphoneorusername ||
             registereduser.username === storemailorphoneorusername) &&
           registereduser.password === storepassword

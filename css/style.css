@@ -114,6 +114,11 @@ p {
   position: fixed;
 }
 
+.sidebarinstagramlogo {
+  position: relative;
+  left: 1em;
+}
+
 .sidebarlinkscontainer {
   padding: var(--card-border-radius) 0 0;
   display: flex;
@@ -520,7 +525,7 @@ p {
 }
 
 .posts {
-  border-bottom: 1px solid var(--feedtext);
+  border-bottom: 1px solid var(--popup);
 }
 
 .posts-maincontent-container {
@@ -549,8 +554,10 @@ p {
 }
 
 .usersfeedcontentpost .userfeedpic {
-  width: 45vw;
+  width: 35vw;
   height: auto;
+  border: 2px solid var(--popup);
+  border-radius: 5px;
 }
 
 .userdetails-inner-box .location {
@@ -811,4 +818,42 @@ p {
   position: absolute;
   right: 10px;
   top: 5px;
+}
+
+.all-caughtup-posts-container {
+  padding: var(--card-border-radius);
+  border-bottom: 1px solid var(--popup);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.all-caughtup-posts-container .allposts-caughtup-pic {
+  height: auto;
+  width: 7rem;
+  /* display: block;
+  margin: 0 auto; */
+}
+
+.allposts-caughtup-headline {
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.allposts-caughtup-description {
+  color: var(--feedtext);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.viewolderpostslinks {
+  display: block;
+  color: var(--blue);
+  font-weight: bold;
+  text-transform: capitalize;
 }

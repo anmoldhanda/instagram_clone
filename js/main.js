@@ -102,6 +102,10 @@ logoutbtn.onclick = function () {
   localStorage.removeItem("currentuserdetails");
 };
 
+const createpostformusername = document.getElementById(
+  "createpostformusername"
+);
+createpostformusername.innerHTML = localStorage.getItem("currentuserdetails");
 // ==================================== show hide the create post popup ====================================
 const createpostpopupbtn = document.querySelector(".createpostpopupbtn");
 const crossiconoverlay = document.querySelector(".crossicon-overlay");
@@ -182,13 +186,15 @@ function renderphotos() {
         <div class="posted-userdetails-box">
           <div class="photobox">
             <img
-              src="images/topg1.jpeg"
+              src="images/profilepic.jpg"
               alt="posted user's profile pic"
               class="profilepic"
             />
           </div>
           <div class="userdetails-inner-box">
-            <h3 class="posted-username">__top.g__ <span class="timestamp">1d</span></h3>
+            <h3 class="posted-username">${localStorage.getItem(
+              "currentuserdetails"
+            )}<span class="timestamp">1d</span></h3>
             <p class="location">${
               JSON.parse(localStorage.getItem("postextdetails"))[
                 "postlocationaddress"
@@ -323,7 +329,9 @@ function renderphotos() {
           </p>
         </div>
         <div class="user-post-caption-container">
-          <h3 class="posted-username">__top.g__</h3>
+          <h3 class="posted-username">${localStorage.getItem(
+            "currentuserdetails"
+          )}</h3>
           <p class="usercaptiontext">${
             JSON.parse(localStorage.getItem("postextdetails"))["postcaption"]
           }</p>
@@ -355,9 +363,11 @@ const hearticon = document.querySelectorAll(".likeicon i");
 Array.from(hearticon).forEach((singlehearticon) => {
   singlehearticon.addEventListener("click", () => {
     if (singlehearticon.classList.contains("fa-regular")) {
+      singlehearticon.setAttribute("title", "Unlike");
       singlehearticon.classList.add("fa-solid");
       singlehearticon.classList.remove("fa-regular");
     } else {
+      singlehearticon.setAttribute("title", "Like");
       singlehearticon.classList.add("fa-regular");
       singlehearticon.classList.remove("fa-solid");
     }
