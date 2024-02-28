@@ -135,7 +135,7 @@ inputfile.addEventListener("change", (e) => {
   // console.log(e.target.files[0]);
   let selectedimagefileurl = URL.createObjectURL(e.target.files[0]);
   // ======================== created a blob url from the user's selected image file ========================
-  console.log(selectedimagefileurl);
+  // console.log(selectedimagefileurl);
   let imagetag = document.createElement("img");
   imagetag.src = selectedimagefileurl;
   imagetag.className = "selectedimagefilepost";
@@ -162,7 +162,7 @@ createpostform.addEventListener("submit", (e) => {
   const filereader = new FileReader();
   // ==================== converted the image file into base 64 url using filerader api ====================
   filereader.addEventListener("load", (e) => {
-    console.log(filereader.result);
+    // console.log(filereader.result);
     localStorage.setItem("postpic", filereader.result);
     renderphotos();
   });
@@ -416,9 +416,9 @@ Array.from(allpostcommentinputcontainers).forEach(
             JSON.stringify(userpostcomment)
           );
           postcommentsform.reset();
-          console.log("comment posted successfully");
+          // console.log("comment posted successfully");
         } else {
-          console.log("please enter a comment before posting");
+          // console.log("please enter a comment before posting");
           postcommentsform.reset();
         }
       });

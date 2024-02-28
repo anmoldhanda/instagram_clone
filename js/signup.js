@@ -12,15 +12,15 @@ inputemailorphone.addEventListener("blur", () => {
   let phoneregex = /^([0-9]){10}$/;
   let inputemailorphonevalue = inputemailorphone.value;
   if (emailregex.test(inputemailorphonevalue)) {
-    console.log("user's email id is validated");
+    // console.log("user's email id is validated");
     inputemailorphone.classList.remove("errorinputemailorphone");
     validinputemailorphone = true;
   } else if (phoneregex.test(inputemailorphonevalue)) {
-    console.log("user's phone number is validated");
+    // console.log("user's phone number is validated");
     inputemailorphone.classList.remove("errorinputemailorphone");
     validinputemailorphone = true;
   } else {
-    console.log("user's both phone number or email id is invalid");
+    // console.log("user's both phone number or email id is invalid");
     inputemailorphone.classList.add("errorinputemailorphone");
     validinputemailorphone = false;
   }
@@ -30,11 +30,11 @@ inputname.addEventListener("blur", () => {
   let nameregex = /^([a-zA-Z]\s*){3,20}$/;
   let inputnamevalue = inputname.value;
   if (nameregex.test(inputnamevalue)) {
-    console.log("valid name");
+    // console.log("valid name");
     inputname.classList.remove("errorinputname");
     validinputname = true;
   } else {
-    console.log("invalid name");
+    // console.log("invalid name");
     inputname.classList.add("errorinputname");
     validinputname = false;
   }
@@ -44,11 +44,11 @@ inputusername.addEventListener("blur", () => {
   let usernameregex = /^([\.\-\_a-zA-Z0-9]+){5,25}$/;
   let inputusernamevalue = inputusername.value;
   if (usernameregex.test(inputusernamevalue)) {
-    console.log("valid username");
+    // console.log("valid username");
     inputusername.classList.remove("errorinputusername");
     validinputusername = true;
   } else {
-    console.log("invalid username");
+    // console.log("invalid username");
     inputusername.classList.add("errorinputusername");
     validinputusername = false;
   }
@@ -58,11 +58,11 @@ inputpassword.addEventListener("blur", () => {
   let passwordregex = /^([a-zA-Z0-9]+){5,15}$/;
   let inputpasswordvalue = inputpassword.value;
   if (passwordregex.test(inputpasswordvalue)) {
-    console.log("valid password");
+    // console.log("valid password");
     inputpassword.classList.remove("errorinputpassword");
     validinputpassword = true;
   } else {
-    console.log("invalid password");
+    // console.log("invalid password");
     inputpassword.classList.add("errorinputpassword");
     validinputpassword = false;
   }
@@ -77,7 +77,7 @@ signupform.addEventListener("submit", (e) => {
     validinputusername &&
     validinputpassword
   ) {
-    console.log("ok");
+    // console.log("ok");
     let storemailorphone = btoa(inputemailorphone.value);
     let storename = btoa(inputname.value);
     let storeusername = btoa(inputusername.value);
@@ -93,7 +93,7 @@ signupform.addEventListener("submit", (e) => {
         );
       })
     ) {
-      console.log("user with credentials already exists on portal");
+      // console.log("user with credentials already exists on portal");
       signupform.reset();
     } else {
       let formdataentry = {
@@ -112,7 +112,7 @@ signupform.addEventListener("submit", (e) => {
       location.href = "login.html";
     }
   } else {
-    console.log("not ok");
+    // console.log("not ok");
     signupform.reset();
   }
 });

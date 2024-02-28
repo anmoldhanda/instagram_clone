@@ -11,25 +11,25 @@ inputemailorphoneorusername.addEventListener("blur", (e) => {
   let usernameregex = /^([\.\-\_a-zA-Z0-9]+){5,25}$/;
   let inputemailorphoneorusernamevalue = inputemailorphoneorusername.value;
   if (emailregex.test(inputemailorphoneorusernamevalue)) {
-    console.log("valid email id");
+    // console.log("valid email id");
     inputemailorphoneorusername.classList.remove(
       "errorinputemailorphoneorusername"
     );
     validinputemailorphoneorusername = true;
   } else if (phoneregex.test(inputemailorphoneorusernamevalue)) {
-    console.log("valid phone number");
+    // console.log("valid phone number");
     inputemailorphoneorusername.classList.remove(
       "errorinputemailorphoneorusername"
     );
     validinputemailorphoneorusername = true;
   } else if (usernameregex.test(inputemailorphoneorusernamevalue)) {
-    console.log("valid username");
+    // console.log("valid username");
     inputemailorphoneorusername.classList.remove(
       "errorinputemailorphoneorusername"
     );
     validinputemailorphoneorusername = true;
   } else {
-    console.log("email id, phone number, username are invalid");
+    // console.log("email id, phone number, username are invalid");
     inputemailorphoneorusername.classList.add(
       "errorinputemailorphoneorusername"
     );
@@ -41,11 +41,11 @@ inputpassword.addEventListener("blur", (e) => {
   let passwordregex = /^([a-zA-Z0-9]+){5,15}$/;
   let inputpasswordvalue = inputpassword.value;
   if (passwordregex.test(inputpasswordvalue)) {
-    console.log("valid password");
+    // console.log("valid password");
     inputpassword.classList.remove("errorinputpassword");
     validinputpassword = true;
   } else {
-    console.log("invalid password");
+    // console.log("invalid password");
     inputpassword.classList.add("errorinputpassword");
     validinputpassword = false;
   }
@@ -62,7 +62,7 @@ const loginform = document.querySelector(".loginform");
 loginform.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validinputemailorphoneorusername && validinputpassword) {
-    console.log("ok");
+    // console.log("ok");
     let storemailorphoneorusername = btoa(inputemailorphoneorusername.value);
     let storepassword = btoa(inputpassword.value);
     // ==================== retrivieng the stored login credentials from client side in decrypted format ====================
@@ -79,7 +79,7 @@ loginform.addEventListener("submit", (e) => {
         );
       })
     ) {
-      console.log("user is registered with us");
+      // console.log("user is registered with us");
       let storecurrentuserlogindetails = formdatabase.find(
         (currentuserdetails) => {
           return (
@@ -99,13 +99,13 @@ loginform.addEventListener("submit", (e) => {
         loginform.reset();
       }
     } else {
-      console.log(
-        "user isn't registered with us to login the portal signup first"
-      );
+      // console.log(
+      //   "user isn't registered with us to login the portal signup first"
+      // );
       loginform.reset();
     }
   } else {
-    console.log("not ok");
+    // console.log("not ok");
     loginform.reset();
   }
 });
