@@ -861,9 +861,3 @@ p {
   font-weight: bold;
   text-transform: capitalize;
 }
-
-.popupbox-profile-bottom-container {
-  position: absolute;
-  bottom: 0;
-  left: 2em;
-}
