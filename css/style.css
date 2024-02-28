@@ -105,10 +105,13 @@ p {
 
 .sidebarmenu {
   min-width: 22vw;
+  border-right: 1px solid var(--lightgrey);
+  height: 100vh;
+  position: relative;
 }
 
 .sidebarmenuinner {
-  border-right: 1px solid var(--lightgrey);
+  /* border-right: 1px solid var(--lightgrey); */
   padding: var(--card-border-radius) var(--card-padding);
   min-width: 22vw;
   position: fixed;
@@ -211,6 +214,7 @@ p {
 
 /* ====================== sidebar menu ====================== */
 .feedsidebarsection {
+  height: 100vh;
   border-left: 1px solid var(--lightgrey);
   padding: var(--card-border-radius) var(--card-padding);
   position: relative;
@@ -856,4 +860,10 @@ p {
   color: var(--blue);
   font-weight: bold;
   text-transform: capitalize;
+}
+
+.popupbox-profile-bottom-container {
+  position: absolute;
+  bottom: 0;
+  left: 2em;
 }

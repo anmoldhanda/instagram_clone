@@ -1,0 +1,131 @@
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .signup-login-main-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side-photo-container {
+    display: none;
+  }
+
+  .signup-login-detailsbox-container {
+    max-width: 23em;
+  }
+
+  .floating-labels {
+    width: 100%;
+  }
+
+  .inputfields {
+    width: 100%;
+    border: 1px solid var(--loginsignupline);
+    padding: 10px;
+  }
+
+  .footer-main-container {
+    border-top: 1px solid var(--loginsignupline);
+    width: 100%;
+    padding: var(--border-radius-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-main-container .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .signup-login-main-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side-photo-container {
+    display: none;
+  }
+
+  .signup-login-detailsbox-container {
+    max-width: 23em;
+  }
+
+  .floating-labels {
+    width: 100%;
+  }
+
+  .inputfields {
+    width: 100%;
+    border: 1px solid var(--loginsignupline);
+    padding: 10px;
+  }
+
+  .footer-main-container {
+    border-top: 1px solid var(--loginsignupline);
+    width: 100%;
+    padding: var(--border-radius-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-main-container .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .signup-login-main-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side-photo-container {
+    display: none;
+  }
+
+  .signup-login-detailsbox-container {
+    max-width: 23em;
+  }
+
+  .floating-labels {
+    width: 100%;
+  }
+
+  .inputfields {
+    width: 100%;
+    border: 1px solid var(--loginsignupline);
+    padding: 10px;
+  }
+
+  .footer-main-container {
+    border-top: 1px solid var(--loginsignupline);
+    width: 100%;
+    padding: var(--border-radius-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-main-container .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
